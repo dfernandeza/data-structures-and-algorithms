@@ -12,9 +12,8 @@ One last important thing to mention is that JavaScript array implementation defe
 
 ## Time complexity analysis
 
-| Operation           | Time complexity |
-| ------------------- | --------------- |
-| Access i-th element | O(1)            |
-| Traverse            | O(N)            |
-| Insert              | O(N)            |
-| Delete              | O(N)            |
+| Operation          | Time complexity |
+| ------------------ | --------------- |
+| Access nth element | O(1)            |
+| Insert             | O(N)            |
+| Delete             | O(N)            |

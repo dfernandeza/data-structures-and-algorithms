@@ -8,21 +8,7 @@ export class SinglyLinkedList {
    * Add an element to the end of the linked list
    */
   push(value: number) {
-    const node = new Node(value);
-
-    if (this.head === null) {
-      this.head = node;
-    } else {
-      let current = this.head;
-      // Find the last node
-      while (current.next) {
-        current = current.next;
-      }
-      // Add the new node to the end
-      current.next = node;
-    }
-
-    this.size++;
+    this.insert(value, this.size);
   }
 
   /**
@@ -35,32 +21,37 @@ export class SinglyLinkedList {
 
     const node = new Node(value);
 
+    // insert in the head
     if (index === 0) {
       const temp = this.head;
+
       node.next = temp;
       this.head = node;
-
       this.size++;
 
       return;
     }
 
-    if (this.head) {
-      let currentIndex = 1;
-      let current = this.head.next;
-
-      while (current && current.next && currentIndex < index - 1) {
-        current = current.next;
-        currentIndex++;
-      }
+    // insert in the tail
+    if (index === this.size) {
+      const current = this.at(this.size - 1);
 
       if (current) {
-        const temp = current.next;
         current.next = node;
-        node.next = temp;
-
         this.size++;
       }
+
+      return;
+    }
+
+    const current = this.at(index - 1);
+
+    if (current) {
+      const temp = current.next;
+      current.next = node;
+      node.next = temp;
+
+      this.size++;
     }
   }
 
@@ -74,25 +65,23 @@ export class SinglyLinkedList {
 
     if (this.size === 1) {
       const temp = this.head;
-      this.head = null;
+      this.removeAt(0);
+
+      return temp;
+    }
+
+    const current = this.at(this.size - 2);
+
+    if (current) {
+      const temp = current.next;
+
+      current.next = null;
       this.size--;
 
       return temp;
     }
 
-    let current = this.head;
-    let currentIndex = 0;
-    while (current.next && currentIndex < this.size - 2) {
-      current = current.next;
-      currentIndex++;
-    }
-
-    const temp = current.next;
-    current.next = null;
-
-    this.size--;
-
-    return temp;
+    return null;
   }
 
   /**
@@ -153,18 +142,13 @@ export class SinglyLinkedList {
     }
 
     if (index === this.size - 1) {
-      // delete tail
+      // delete the tail
       this.pop();
 
       return;
     }
 
-    let current = this.head;
-    let currentIndex = 0;
-    while (current && current.next && index - 1 !== currentIndex) {
-      current = current.next;
-      currentIndex++;
-    }
+    const current = this.at(index - 1);
 
     if (current && current.next) {
       current.next = current.next.next;
