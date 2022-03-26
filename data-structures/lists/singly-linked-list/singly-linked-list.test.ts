@@ -136,6 +136,8 @@ describe('Singly-linked List', () => {
 
   describe('Sum List: Having 2 number represented by a linked list, where each node contains a single digit. The digits are stored in reverse order. Write a function that adds them and return the sum as a linked list.', () => {
     test('Solution 1', () => {
+      // TODO: implement this using recursion
+
       const n1 = new SinglyLinkedList();
       const n2 = new SinglyLinkedList();
 
