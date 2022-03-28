@@ -6,7 +6,7 @@ The intention with this repository is not only to serve as a playground to learn
 
 ## Exploring the code
 
-There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a `*.test.js` file containing solutions for different coding problems that use that specific algorithm or data structure.
+There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a `*.problems.test.js` file containing solutions for different coding problems that use that specific algorithm or data structure.
 
 ## Running your own copy
 

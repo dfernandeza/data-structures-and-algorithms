@@ -1,6 +1,6 @@
 import { DoublyLinkedList } from './doubly-linked-list';
 
-describe('Singly-linked List', () => {
+describe('Singly-linked list problems', () => {
   describe('Basic functioning', () => {
     const list = new DoublyLinkedList();
 
