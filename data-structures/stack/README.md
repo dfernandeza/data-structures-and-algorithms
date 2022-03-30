@@ -2,10 +2,6 @@
 
 Think of a stack like a stack of 🥞. A stack uses LIFO (last in first out) or FILO (First In Last Out) ordering.
 
-- LIFO (last in first out) or FILO (First In Last Out)
-- O(1) adding/removing
-- O(n) to access to the nth item in the stack
-
 ## Time complexity analysis
 
 | Operation          | Time complexity |
@@ -13,10 +9,6 @@ Think of a stack like a stack of 🥞. A stack uses LIFO (last in first out) or 
 | Access nth element | O(N)            |
 | Insert             | O(1)            |
 | Delete             | O(1)            |
-
-## API
-
-- **push(value: number):** Add an element to the end of the linked list.
 
 ## API
 
