@@ -1,11 +1,11 @@
 import { Stack } from './stack';
 
-describe("Stack", () => {
+describe('Stack', () => {
   describe('Basic functioning', () => {
     const stack = new Stack();
 
     describe('push', () => {
-      it('should push elements to the stack', () => {
+      it('should push elements into the stack', () => {
         stack.push(9);
         stack.push(5);
         stack.push(27);
@@ -16,7 +16,7 @@ describe("Stack", () => {
     });
 
     describe('peek', () => {
-      it('should return the first element in the stack', () => {
+      it('should return the next element in the stack', () => {
         expect(stack.peek()).toBe(4);
 
         expect(stack.toString()).toBe('[9][5][27][4]');
@@ -24,7 +24,7 @@ describe("Stack", () => {
     });
 
     describe('pop', () => {
-      it('should remove the first element in the stack', () => {
+      it('should remove and return the next element in the stack', () => {
         stack.pop();
 
         expect(stack.peek()).toBe(27);
@@ -45,6 +45,5 @@ describe("Stack", () => {
         expect(stack.isEmpty()).toBe(true);
       });
     });
-
   });
 });
