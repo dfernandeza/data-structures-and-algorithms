@@ -35,4 +35,34 @@ describe('Stack', () => {
       expect(stack.toString()).toBe('[1][2][3][4]');
     });
   });
+
+  describe('Base converter: Write a converter from decimal to the bases between 2 and 36', () => {
+    /**
+     * Time complexity: O(n) ?
+     * Space complexity: O(n) ?
+     */
+    test('Solution 1', () => {
+      function baseConverter(num: number, base: number) {
+        const stack = new Stack();
+        const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        while (num) {
+          const rem = Math.floor(num % base);
+          stack.push(rem);
+
+          num = Math.floor(num / base);
+        }
+
+        let output = '';
+        while (!stack.isEmpty()) {
+          output += digits[stack.pop()!];
+        }
+
+        return output;
+      }
+
+      expect(baseConverter(10, 2)).toBe('1010');
+      expect(baseConverter(100345, 16)).toBe('187F9');
+    });
+  });
 });
