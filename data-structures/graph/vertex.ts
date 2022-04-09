@@ -1,8 +1,8 @@
-export class Vertex {
-  value: string | number;
-  edges: Vertex[] = [];
+export class Vertex<T = number> {
+  value: T;
+  edges: Vertex<T>[] = [];
 
-  constructor(value: number | string) {
+  constructor(value: T) {
     this.value = value;
   }
 }

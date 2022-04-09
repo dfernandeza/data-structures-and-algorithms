@@ -1,13 +1,13 @@
 import { SinglyLinkedList } from '../lists/singly-linked-list/singly-linked-list';
 
-export class Stack {
-  #stack = new SinglyLinkedList();
+export class Stack<T = number> {
+  #stack = new SinglyLinkedList<T>();
 
   /**
    * Adds an item in the stack.
    * @param item
    */
-  push(item: number) {
+  push(item: T) {
     this.#stack.push(item);
   }
 

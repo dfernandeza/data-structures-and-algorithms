@@ -1,9 +1,9 @@
-export class Node {
-  value: number;
-  next: Node | null = null;
-  prev: Node | null = null;
+export class Node<T = number> {
+  value: T;
+  next: Node<T> | null = null;
+  prev: Node<T> | null = null;
 
-  constructor(value: number) {
+  constructor(value: T) {
     this.value = value;
   }
 }

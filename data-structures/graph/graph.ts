@@ -1,28 +1,26 @@
 import { Vertex } from './vertex';
 
-type Value = number | string;
-
-export class Graph {
+export class Graph<T = number> {
   directed: boolean;
   // Adjacency list
-  vertices: Vertex[] = [];
+  vertices: Vertex<T>[] = [];
 
   constructor(directed = false) {
     this.directed = directed;
   }
 
-  addVertex(value: Value) {
-    const vertex = new Vertex(value);
+  addVertex(value: T) {
+    const vertex = new Vertex<T>(value);
     this.vertices.push(vertex);
 
     return vertex;
   }
 
-  #getVertex(value: Value) {
+  #getVertex(value: T) {
     return this.vertices.find((vertex) => vertex.value === value);
   }
 
-  addEdge(value1: Value, value2: Value) {
+  addEdge(value1: T, value2: T) {
     let v1 = this.#getVertex(value1);
     let v2 = this.#getVertex(value2);
 

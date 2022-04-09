@@ -1,13 +1,13 @@
 import { SinglyLinkedList } from '../lists/singly-linked-list/singly-linked-list';
 
-export class Queue {
-  #queue = new SinglyLinkedList();
+export class Queue<T = number> {
+  #queue = new SinglyLinkedList<T>();
 
   /**
    * Adds an item to the queue.
    * @param item
    */
-  enqueue(item: number) {
+  enqueue(item: T) {
     this.#queue.push(item);
   }
 

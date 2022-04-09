@@ -1,20 +1,20 @@
 import { Node } from './node';
 
-export class SinglyLinkedList {
-  head: Node | null = null;
+export class SinglyLinkedList<T = number> {
+  head: Node<T> | null = null;
   size = 0;
 
   /**
    * Add an element to the end of the linked list
    */
-  push(value: number) {
+  push(value: T) {
     this.insert(value, this.size);
   }
 
   /**
    * Inserts a new element at the specified position
    */
-  insert(value: number, index: number) {
+  insert(value: T, index: number) {
     if (index < 0 || index > this.size) {
       return;
     }
@@ -105,7 +105,7 @@ export class SinglyLinkedList {
   /**
    * Removes an element from the the list
    */
-  remove(value: number) {
+  remove(value: T) {
     if (this.head === null) {
       return;
     }
