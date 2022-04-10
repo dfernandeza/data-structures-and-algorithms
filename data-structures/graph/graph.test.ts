@@ -90,5 +90,33 @@ describe('Graph', () => {
         expect(order).toBe('A B C D E F G H I');
       });
     });
+
+    describe('Depth first search', () => {
+      const visited = new Map<string, number>();
+
+      test('visits the vertices first deep and then wide', () => {
+        function depthFirstSearch(vertex: Vertex<string>) {
+          if (!visited.has(vertex.value)) {
+            visited.set(vertex.value, 1);
+          }
+
+          for (const edge of vertex.edges) {
+            if (!visited.has(edge.value)) {
+              depthFirstSearch(edge);
+            }
+          }
+
+          // Here we will do something with vertex
+        }
+
+        for (const vertex of graph.vertices) {
+          depthFirstSearch(vertex);
+        }
+
+        const order = Array.from(visited.keys()).join(' ');
+
+        expect(order).toBe('A B E I F C G D H');
+      });
+    });
   });
 });
