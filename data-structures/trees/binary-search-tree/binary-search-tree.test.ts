@@ -68,9 +68,33 @@ describe('Binary Search Tree', () => {
       expect(bst.max()).toBe(25);
     });
 
-    // TODO
-    it.skip('remove', () => {
-      expect(true).toBe(true);
+    describe('remove', () => {
+      it('removes a leaf node', () => {
+        bst.remove(6);
+
+        const output: number[] = [];
+
+        bst.inOrderTraverse((node) => output.push(node.value));
+        expect(output.join(',')).toBe('3,5,7,8,9,10,11,12,13,14,15,18,20,25');
+      });
+
+      it('removes a node with a left or right child', () => {
+        bst.remove(5);
+
+        const output: number[] = [];
+
+        bst.inOrderTraverse((node) => output.push(node.value));
+        expect(output.join(',')).toBe('3,7,8,9,10,11,12,13,14,15,18,20,25');
+      });
+
+      it('removes a node with two children', () => {
+        bst.remove(18);
+
+        const output: number[] = [];
+
+        bst.inOrderTraverse((node) => output.push(node.value));
+        expect(output.join(',')).toBe('3,7,8,9,10,11,12,13,14,15,20,25');
+      });
     });
   });
 });
