@@ -24,3 +24,4 @@ _This project uses [Jest](https://github.com/facebook/jest) for writing the test
 These are the resources I've been using to sharp my DSA skills in case you are also interested:
 
 - [Learning JavaScript data structures and algorithms [Book]](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+- [itsy-bitsy-data-structures](https://github.com/jamiebuilds/itsy-bitsy-data-structures/)
