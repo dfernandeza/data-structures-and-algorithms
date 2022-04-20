@@ -1,10 +1,10 @@
-import { selectionSort } from './selection-sort';
+import { insertionSort } from './insertion-sort';
 
-describe('Selection sort', () => {
+describe('Insertion sort', () => {
   it('sorts', () => {
     const list = [3, 4, 5, 6, 2, 1];
 
-    selectionSort(list);
+    insertionSort(list);
 
     expect(list).toStrictEqual([1, 2, 3, 4, 5, 6]);
   });

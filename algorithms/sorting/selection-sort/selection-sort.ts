@@ -15,4 +15,6 @@ export function selectionSort(list: number[]) {
     const minIndex = min(list, i);
     [list[i], list[minIndex]] = [list[minIndex], list[i]];
   }
+
+  return list;
 }
