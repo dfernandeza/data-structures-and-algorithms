@@ -37,7 +37,7 @@ The intention with this repository is not to only serve as a playground to learn
 
 ### Searching
 
-- [ ] Linear search
+- [x] Linear search
 - [ ] Binary search
 - [ ] Interpolation search
 - [x] Breadth first search
