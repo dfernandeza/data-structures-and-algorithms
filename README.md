@@ -2,11 +2,61 @@
 
 This repository contains implementations of common data structures and algorithms using modern JavaScript.
 
-The intention with this repository is not only to serve as a playground to learn DSA (or as a refresher) but also to practice solving different coding problems using DSA.
+The intention with this repository is not to only serve as a playground to learn DSA (or as a refresher) but also to practice solving different coding problems using DSA.
+
+## Covered data structures
+
+- [x] Array
+- [x] Linked list
+- [x] Doubly-linked list
+- [x] Stack
+- [x] Queue
+- [x] Tree
+- [ ] Trie
+- [x] Binary search tree
+- [ ] AVL tree
+- [ ] Red-Black tree
+- [x] Binary heap
+- [x] Graph
+
+## Covered algorithms
+
+### Sorting
+
+- [x] Bubble sort
+- [x] Insertion sort
+- [x] Selection sort
+- [x] Merge sort
+- [x] Quick sort
+- [x] Bucket sort
+- [x] Counting sort
+- [x] Radix sort
+- [ ] Cycle sort
+- [x] Heap sort
+- [ ] Topological sort (top-sort)
+
+### Searching
+
+- [ ] Linear search
+- [ ] Binary search
+- [ ] Interpolation search
+- [x] Breadth first search
+- [x] Depth first search
+
+### Others
+
+Shortest path
+
+- [ ] Dijkstra's
+- [ ] Floyd-Warshall
+- [ ] Minimum spanning tree (MST)
+- [ ] Prim's
+- [ ] Kruskal's
+- [ ] Bellman–Ford
 
 ## Exploring the code
 
-There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a `*.problems.test.js` file containing solutions for different coding problems that use that specific algorithm or data structure.
+There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a `*.problems.test.js` file containing solutions for different coding problems using that specific algorithm or data structure.
 
 ## Running your own copy
 
@@ -25,3 +75,4 @@ These are the resources I've been using to sharp my DSA skills in case you are a
 
 - [Learning JavaScript data structures and algorithms [Book]](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
 - [itsy-bitsy-data-structures](https://github.com/jamiebuilds/itsy-bitsy-data-structures/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/)
