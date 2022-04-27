@@ -33,7 +33,7 @@ The intention with this repository is not to only serve as a playground to learn
 - [x] Radix sort
 - [ ] Cycle sort
 - [x] Heap sort
-- [ ] Topological sort (top-sort)
+- [x] Topological sort (top-sort)
 
 ### Searching
 
