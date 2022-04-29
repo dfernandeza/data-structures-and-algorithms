@@ -47,7 +47,7 @@ The intention with this repository is not to only serve as a playground to learn
 
 Shortest path
 
-- [ ] Dijkstra's
+- [x] Dijkstra's
 - [ ] Floyd-Warshall
 - [ ] Minimum spanning tree (MST)
 - [ ] Prim's
