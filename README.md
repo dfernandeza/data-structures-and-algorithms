@@ -47,19 +47,19 @@ The intention with this repository is not to only serve as a playground to learn
 
 Shortest path
 
-## Covered algorithms designs and techniques
-
-- [ ] Divide and conquer
-- [ ] Dynamic programming
-- [ ] Greedy
-- [ ] Backtracking
-
 - [x] Dijkstra's
 - [ ] Floyd-Warshall
 - [ ] Minimum spanning tree (MST)
 - [ ] Prim's
 - [ ] Kruskal's
 - [ ] Bellman–Ford
+
+## Covered algorithms designs and techniques
+
+- [ ] Divide and conquer
+- [ ] Dynamic programming
+- [ ] Greedy
+- [ ] Backtracking
 
 ## Exploring the code
 
