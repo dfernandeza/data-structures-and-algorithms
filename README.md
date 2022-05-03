@@ -31,7 +31,7 @@ The intention with this repository is not to only serve as a playground to learn
 - [x] Bucket sort
 - [x] Counting sort
 - [x] Radix sort
-- [ ] Cycle sort
+- [x] Cycle sort
 - [x] Heap sort
 - [x] Topological sort (top-sort)
 
@@ -46,6 +46,13 @@ The intention with this repository is not to only serve as a playground to learn
 ### Others
 
 Shortest path
+
+## Covered algorithms designs and techniques
+
+- [ ] Divide and conquer
+- [ ] Dynamic programming
+- [ ] Greedy
+- [ ] Backtracking
 
 - [x] Dijkstra's
 - [ ] Floyd-Warshall
