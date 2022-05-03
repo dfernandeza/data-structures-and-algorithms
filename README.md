@@ -56,7 +56,7 @@ Shortest path
 
 ## Covered algorithms designs and techniques
 
-- [ ] Divide and conquer
+- [x] Divide and conquer
 - [ ] Dynamic programming
 - [ ] Greedy
 - [ ] Backtracking

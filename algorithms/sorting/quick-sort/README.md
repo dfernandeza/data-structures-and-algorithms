@@ -4,3 +4,4 @@ Uses divide and conquer approach, dividing the original array into smaller ones 
 
 - **Runtime:** O(n log(n)) (average)
 - **Memory:** O(n log(n))
+- **Technique/type**: Divide and conquer

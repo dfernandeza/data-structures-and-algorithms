@@ -4,3 +4,4 @@ Divide the list in half, sorts each half and then merges them back together. Is 
 
 - **Runtime:** O(n log(n))
 - **Memory:** depends
+- **Technique/type**: Divide and conquer
