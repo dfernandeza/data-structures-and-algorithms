@@ -20,3 +20,25 @@ export function binarySearch<T = number>(list: T[], value: T) {
 
   return -1;
 }
+
+export function recursiveBinarySearch<T = number>(
+  list: T[],
+  value: T,
+  start: number,
+  end: number
+): number {
+  if (start >= end) {
+    return -1;
+  }
+
+  const middle = Math.floor((end + start) / 2);
+
+  // Base case
+  if (list[middle] === value) {
+    return middle;
+  }
+
+  return list[middle] < value
+    ? recursiveBinarySearch(list, value, middle + 1, end)
+    : recursiveBinarySearch(list, value, start, middle - 1);
+}
