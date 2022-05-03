@@ -29,3 +29,5 @@ flowchart TD
 - **min():** Returns the minimum value in the tree.
 - **max():** Returns the maximum value in the tree.
 - **remove(value):** Removes the key from the tree.
+
+## Coding problems

@@ -24,3 +24,5 @@ flowchart LR
 - **remove(value: number):** Removes an element from the list.
 - **removeAt(index: number):** Delete an item from a given index.
 - **isEmpty():** Return a boolean indicating whether the list is empty.
+
+## Coding problems

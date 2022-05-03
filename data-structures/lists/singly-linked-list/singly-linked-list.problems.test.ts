@@ -1,7 +1,8 @@
 import { SinglyLinkedList } from './singly-linked-list';
 
-describe('Singly-linked list problems', () => {
-  describe('Partition: partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. IMPORTANT: x can appear anywhere in the "right partition; it does not need to appear between the left and right partitions."', () => {
+// You can find the problem descriptions in ./README.md
+describe('Singly-linked list', () => {
+  describe('Problem 1', () => {
     /**
      * Time complexity: O(n)
      * Space complexity: O(1)
@@ -41,7 +42,7 @@ describe('Singly-linked list problems', () => {
     });
   });
 
-  describe('Sum List: Having 2 number represented by a linked list, where each node contains a single digit. The digits are stored in reverse order. Write a function that adds them and return the sum as a linked list.', () => {
+  describe('Problem 2', () => {
     /**
      * Time complexity: O(n * m)
      * Space complexity: O(n)

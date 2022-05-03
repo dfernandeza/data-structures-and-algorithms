@@ -28,3 +28,5 @@ flowchart LR
 
 - **addVertex(value: number | string):** Adds a new vertex to the graph.
 - **addEdge(value1: Value, value2: Value):** Adds an edge from `value1` to `value2`.
+
+## Coding problems

@@ -1,7 +1,8 @@
 import { Stack } from './stack';
 
+// You can find the problem descriptions in ./README.md
 describe('Stack', () => {
-  describe('Sort stack: Sort a stack in ascending order (with smallest items on top). You may use at most one additional stack to hold items, but you may not copy the elements into any other data structure (e.g. array).', () => {
+  describe('Problem 1', () => {
     /**
      * Time complexity: O(n^2)
      * Space complexity: O(n)
@@ -36,7 +37,7 @@ describe('Stack', () => {
     });
   });
 
-  describe('Base converter: Write a converter from decimal to the bases between 2 and 36', () => {
+  describe('Problem 2', () => {
     /**
      * Time complexity: O(n) ?
      * Space complexity: O(n) ?

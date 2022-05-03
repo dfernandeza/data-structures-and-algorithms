@@ -63,11 +63,11 @@ Shortest path
 
 ## Exploring the code
 
-There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a `*.problems.test.js` file containing solutions for different coding problems using that specific algorithm or data structure.
+There are 2 directories `algorithms` and `data-structures` where you can find all the different implementations. Each algorithm and data structure would have a `README` file containing a small description and a list of coding problems that maps to a `*.problems.test.js` file containing the solutions.
 
 ## Running your own copy
 
-To run your own copy, clone this repository and execute:
+To run your own copy, fork this repository and execute:
 
 ```
 npm i
@@ -81,5 +81,6 @@ _This project uses [Jest](https://github.com/facebook/jest) for writing the test
 These are the resources I've been using to sharp my DSA skills in case you are also interested:
 
 - [Learning JavaScript data structures and algorithms [Book]](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+- [Grokking Algorithms [Book]](https://www.manning.com/books/grokking-algorithms)
 - [itsy-bitsy-data-structures](https://github.com/jamiebuilds/itsy-bitsy-data-structures/)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/)

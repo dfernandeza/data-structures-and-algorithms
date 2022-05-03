@@ -1,5 +1,6 @@
-describe('Array problems', () => {
-  describe('Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.', () => {
+// You can find the problem descriptions in ./README.md
+describe('Array', () => {
+  describe('Problem 1', () => {
     const matrix = [
       [1, 2, 3, 4, 5],
       [6, 7, 8, 9, 10],

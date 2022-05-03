@@ -17,3 +17,11 @@ One last important thing to mention is that JavaScript array implementation defe
 | Access nth element | O(1)            |
 | Insert             | O(N)            |
 | Delete             | O(N)            |
+
+## Coding problems
+
+<details>
+  <summary>Problem 1. Rotate matrix</summary>
+  
+  Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.
+</details>

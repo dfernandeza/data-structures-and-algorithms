@@ -16,3 +16,5 @@ Think of a queue like a queue in the supermarket 🛒. A queue implements FIFO (
 - **dequeue:** Removes an item from the queue. The items are popped in the same order in which they are pushed. If the queue is empty, then it is said to be an Underflow condition.
 - **peek:** Get the front item from queue.
 - **isEmpty:** Returns true if the queue is empty, else false.
+
+## Coding problems
