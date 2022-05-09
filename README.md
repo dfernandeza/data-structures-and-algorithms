@@ -59,7 +59,7 @@ Shortest path
 - [x] Divide and conquer
 - [x] Dynamic programming
 - [x] Greedy
-- [ ] Backtracking
+- [x] Backtracking
 
 ## Exploring the code
 
