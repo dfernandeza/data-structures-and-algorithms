@@ -66,6 +66,7 @@ describe('Graph', () => {
       const queue = new Queue<Vertex<string>>();
       const visited = new Map<string, number>();
 
+      // Time complexity: O(v + e) `v` is the number of vertices an `e` the number of edges
       test('traverse the graph, one layer at a time', () => {
         const start = graph.vertices[0];
 
@@ -94,6 +95,7 @@ describe('Graph', () => {
     describe('Depth first search', () => {
       const visited = new Map<string, number>();
 
+      // Time complexity: O(v + e) `v` is the number of vertices an `e` the number of edges
       test('visits the vertices first deep and then wide', () => {
         function depthFirstSearch(vertex: Vertex<string>) {
           if (!visited.has(vertex.value)) {

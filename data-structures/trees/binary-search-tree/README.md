@@ -19,6 +19,14 @@ flowchart TD
     20 --- 25
 ```
 
+## Time complexity analysis
+
+| Operation          | Time complexity |
+| ------------------ | --------------- |
+| Access nth element | O(LogN)         |
+| Insert             | O(LogN)         |
+| Delete             | O(LogN)         |
+
 ## API
 
 - **insert(value):** Inserts a new key in the tree.

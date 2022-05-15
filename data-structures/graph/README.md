@@ -24,6 +24,16 @@ flowchart LR
     C --- E
 ```
 
+## Time complexity analysis
+
+| Operation     | Time complexity |
+| ------------- | --------------- |
+| Add vertex    | O(1)            |
+| Add edge      | O(1)            |
+| Remove vertex | O(V + E)        |
+| Remove edge   | O(E)            |
+| Query         | O(V)            |
+
 ## API
 
 - **addVertex(value: number | string):** Adds a new vertex to the graph.

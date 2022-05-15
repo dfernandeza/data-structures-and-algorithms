@@ -49,3 +49,11 @@ Now, Given a node at index `n`, let's try and figure out a formula to find the i
 `parent(n) = is even ? (n - 2) / 2 : (n - 1) / 2`
 
 The right node index will always be even and the left node index will always be odd so, we use this to go back from our left and right formulas.
+
+## Time complexity analysis
+
+| Operation                         | Time complexity |
+| --------------------------------- | --------------- |
+| Access nth element (find max/min) | O(1)            |
+| Insert                            | O(LogN)         |
+| Delete                            | O(LogN)         |
