@@ -13,3 +13,13 @@ Examples: Quick sort, Merge sort, Binary search (recursive)
   
   For example for array `[-2, -5, 6, -2, -3, 1, 5, -6]`, the maximum subarray sum will be `7` which is the sum of the elements `6, -2, -3, 1, 5`.
 </details>
+
+<details>
+  <summary>Problem 2. Inversion Count</summary>
+  
+  Given an array of integers. Find the Inversion Count in the array.
+  
+  Inversion Count: For an array, inversion count indicates how far (or close) the array is from being sorted. If the array is already sorted then the inversion count is 0. If an array is sorted in the reverse order then the inversion count is the maximum.
+  
+  Formally, two elements `a[i]` and `a[j]` form an inversion if `a[i] > a[j]` and `i < j`.
+</details>

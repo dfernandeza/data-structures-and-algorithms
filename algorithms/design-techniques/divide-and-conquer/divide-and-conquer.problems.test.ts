@@ -51,4 +51,66 @@ describe('Divide and conquer problems', () => {
       expect(maxSum(arr, 0, arr.length - 1)).toBe(7);
     });
   });
+
+  describe('Problem 2', () => {
+    const arr = [2, 4, 1, 3, 5];
+
+    test('Solution 1', () => {
+      function merge(
+        [leftSubArr]: [number[], number],
+        [rightSubArr]: [number[], number]
+      ): [number[], number] {
+        const arr = [];
+        let i = 0;
+        let j = 0;
+
+        let swaps = 0;
+
+        while (i < leftSubArr.length && j < rightSubArr.length) {
+          if (leftSubArr[i] < rightSubArr[j]) {
+            arr.push(leftSubArr[i++]);
+          } else {
+            arr.push(rightSubArr[j++]);
+            // because left and right sub-arrays are sorted,
+            // so all the remaining elements in left-subarray
+            // (a[i+1], a[i+2] … a[mid]) will be greater than a[j].
+            swaps += leftSubArr.length + 1 - j;
+          }
+        }
+
+        return [
+          [...arr, ...leftSubArr.slice(i), ...rightSubArr.slice(j)],
+          swaps,
+        ];
+      }
+
+      function getInversionCount([arr, swaps]: [number[], number]): [
+        number[],
+        number
+      ] {
+        // O(n^2)
+        // for (let i = 0; i < arr.length; i++) {
+        //   for (let j = 0; j < arr.length; j++) {
+        //     if (i === j) { continue; }
+
+        //     if (i < j && arr[i] > arr[j]) {
+        //       result.push([arr[i], arr[j]]);
+        //     }
+        //   }
+        // }
+
+        if (arr.length === 1) {
+          return [arr, swaps];
+        }
+
+        const mid = Math.floor(arr.length / 2);
+        const left = getInversionCount([arr.slice(0, mid), swaps]);
+        const right = getInversionCount([arr.slice(mid, arr.length), swaps]);
+
+        return merge(left, right);
+      }
+
+      expect(getInversionCount([arr, 0])).toStrictEqual([[1, 2, 3, 4, 5], 3]);
+    });
+  });
 });
