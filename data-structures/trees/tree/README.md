@@ -21,7 +21,40 @@ flowchart TD
 
 <details>
   <summary>Problem 1. Print Right View of a Binary Tree</summary>
+  
+  Given a Binary Tree, print Right view of it. Right view of a Binary Tree is set of nodes visible when tree is visited from Right side.
+</details>
 
-Given a Binary Tree, print Right view of it. Right view of a Binary Tree is set of nodes visible when tree is visited from Right side.
+<details>
+  <summary>Problem 2. Print the height of the binary tree</summary>
+  
+  You're given a binary tree T. Write a code to print the height of the binary tree. Height of empty tree is -1, height of tree with one node is 0 and height of below tree is 2.
 
+```mermaid
+flowchart TB
+
+1 --> 2
+1 --> 3
+2 --> 4
+2 --> 5
+```
+
+</details>
+
+<details>
+  <summary>Problem 3. Connect nodes at same level</summary>
+  Write a function to connect all the adjacent nodes at the same level in a binary tree. Structure of the given Binary Tree node is like following.
+  
+  ```ts
+  class Node<T = number> { 
+    leftNode: Node<T> | null = null;
+    rightNode: Node<T> | null = null;
+    nextRight: Node<T> | null = null;
+    value: T;
+    
+    constructor(value: T) {
+      this.value = value;
+    }
+  }
+  ```
 </details>

@@ -1,3 +1,5 @@
+import { Stack } from '../stack/stack';
+
 // You can find the problem descriptions in ./README.md
 describe('Array', () => {
   describe('Problem 1', () => {
@@ -70,6 +72,114 @@ describe('Array', () => {
       }
 
       expect(matrix).toEqual(rotatedMatrix);
+    });
+  });
+
+  describe('Problem 2', () => {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     */
+    test('Solution 1', () => {
+      const arr = [4, 5, 2, 25];
+      const stack = new Stack();
+      const ans = [];
+
+      stack.push(arr[0]);
+
+      for (let i = 1; i < arr.length; i++) {
+        while (!stack.isEmpty() && stack.peek()! < arr[i]) {
+          ans.push([stack.pop(), arr[i]]);
+        }
+
+        stack.push(arr[i]);
+      }
+
+      while (!stack.isEmpty()) {
+        ans.push([stack.pop(), -1]);
+      }
+
+      expect(ans).toStrictEqual([
+        [4, 5],
+        [2, 25],
+        [5, 25],
+        [25, -1],
+      ]);
+    });
+  });
+
+  describe('Problem 3', () => {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     */
+    test('Solution 1', () => {
+      const nums1 = [1, 2, 3, 0, 0, 0];
+      const m = 3;
+      const nums2 = [2, 5, 6];
+      const n = 3;
+
+      var merge = function (
+        nums1: number[],
+        m: number,
+        nums2: number[],
+        n: number
+      ) {
+        // Go backwards comparing the bigger numbers
+        // `nums1` amount of values and `nums2` together equals full length of nums1
+        let back = n + m - 1;
+        // Both are decrease since we start with 0 in code not 1
+        n--;
+        m--;
+        // Since `nums1` should always be returned. We only care as long as `n` is greater than 0.
+        // `nums1` is sorted. Once there are no more `nums2`, everything else is sorted
+        while (n >= 0) {
+          // If `m` exists, check if `nums1` is bigger than `nums2`
+          if (m >= 0 && nums1[m] > nums2[n]) {
+            nums1[back] = nums1[m];
+            m--;
+          } else {
+            nums1[back] = nums2[n];
+            n--;
+          }
+
+          back--;
+        }
+
+        return nums1;
+      };
+
+      expect(merge(nums1, m, nums2, n)).toStrictEqual([1, 2, 2, 3, 5, 6]);
+    });
+  });
+
+  describe('Problem 4', () => {
+    /**
+     * Time complexity: O(n * m)
+     * Space complexity: O(1)
+     */
+    test('Solution 1', () => {
+      // Input: X[] = [2, 1, 6], Y = [1, 5]
+      // Output: 3
+      // Explanation: There are total 3 pairs where pow(x, y) is greater than pow(y, x)
+      // Pairs are (2, 1), (2, 5) and (6, 1)
+
+      // TODO: https://www.geeksforgeeks.org/find-number-pairs-xy-yx/
+
+      const X = [2, 1, 6];
+      const Y = [1, 5];
+
+      let result = 0;
+
+      for (let x = 0; x < X.length; x++) {
+        for (let y = 0; y < Y.length; y++) {
+          if (Math.pow(x, y) > Math.pow(y, x)) {
+            result++;
+          }
+        }
+      }
+
+      expect(result).toBe(3);
     });
   });
 });

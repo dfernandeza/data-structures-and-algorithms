@@ -27,6 +27,10 @@ describe('Tree', () => {
                   8
     */
 
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(h) where h is the height of the tree
+     */
     test('Solution 1', () => {
       // Using pre-order traversal
       function traverse(
@@ -53,6 +57,10 @@ describe('Tree', () => {
       expect(Object.values(output)).toStrictEqual([1, 3, 7, 8]);
     });
 
+    /**
+     * Time complexity: O(n + m)
+     * Space complexity: O(n)
+     */
     test('Solution 2', () => {
       // BFS solution
 
@@ -62,13 +70,16 @@ describe('Tree', () => {
       queue.enqueue(root);
 
       while (!queue.isEmpty()) {
+        // O(n)
         let count = queue.size;
 
         while (count > 0) {
+          // O(m)
           const node = queue.dequeue();
 
           count -= 1;
 
+          // Only push the right most node
           if (count === 0) {
             output.push(node?.value);
           }
@@ -84,6 +95,120 @@ describe('Tree', () => {
       }
 
       expect(output).toStrictEqual([1, 3, 7, 8]);
+    });
+  });
+
+  describe('Problem 2', () => {
+    const root = new Node<number>(1);
+
+    root.leftNode = new Node(2);
+    root.rightNode = new Node(3);
+
+    root.leftNode.leftNode = new Node(4);
+    root.leftNode.rightNode = new Node(5);
+
+    /*
+           1
+        /     \
+      2        3
+    /   \ 
+    4     5
+    */
+
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(h) where h is the height of the tree ?
+     */
+    test('Solution 1', () => {
+      // pre-order traverse
+      function traverse(node: Node | null, levels: number): number {
+        if (node === null) {
+          return levels;
+        }
+
+        levels += 1;
+
+        return Math.max(
+          traverse(node.leftNode, levels),
+          traverse(node.rightNode, levels)
+        );
+      }
+
+      const height = -1;
+      traverse(root, height);
+
+      expect(traverse(root, height)).toBe(2);
+    });
+  });
+
+  describe('Problem 3', () => {
+    class ConnectedNode<T = number> {
+      leftNode: ConnectedNode<T> | null = null;
+      rightNode: ConnectedNode<T> | null = null;
+      nextRight: ConnectedNode<T> | null = null;
+      value: T;
+
+      constructor(value: T) {
+        this.value = value;
+      }
+    }
+
+    /**
+     * Time complexity:
+     * Space complexity:
+     */
+    test('Solution 1', () => {
+      //      A
+      //     / \
+      //    B   C
+      //   / \   \
+      //  D   E   F
+
+      const root = new ConnectedNode<string>('A');
+
+      root.leftNode = new ConnectedNode<string>('B');
+      root.rightNode = new ConnectedNode<string>('C');
+
+      root.leftNode.leftNode = new ConnectedNode<string>('D');
+      root.leftNode.rightNode = new ConnectedNode<string>('E');
+
+      root.rightNode.rightNode = new ConnectedNode<string>('F');
+
+      //     Output Tree
+      //      A--->null
+      //     / \
+      //    B-->C-->null
+      //   / \   \
+      //  D-->E-->F-->null
+
+      const map: Record<number, ConnectedNode<string>> = {};
+
+      function traverse(node: ConnectedNode<string> | null, level: number = 0) {
+        if (node === null) {
+          return;
+        }
+
+        if (map[level]) {
+          map[level].nextRight = node;
+        }
+
+        map[level] = node;
+
+        traverse(node.leftNode, level + 1);
+        traverse(node.rightNode, level + 1);
+      }
+
+      traverse(root);
+
+      expect(root.nextRight).toBeNull();
+
+      expect(root.leftNode.nextRight?.value).toBe('C');
+      expect(root.rightNode.nextRight).toBeNull();
+
+      expect(root.leftNode.leftNode.nextRight?.value).toBe('E');
+      expect(root.leftNode.rightNode.nextRight?.value).toBe('F');
+
+      expect(root.rightNode.rightNode.nextRight).toBeNull();
     });
   });
 });
