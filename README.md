@@ -1,5 +1,7 @@
 # Data structures and algorithms (DSA)
 
+![solved coding problems](https://img.shields.io/badge/solved%20coding%20problems-16-orange)
+
 This repository contains implementations of common data structures and algorithms using modern JavaScript.
 
 The intention with this repository is not to only serve as a playground to learn DSA (or as a refresher) but also to practice solving different coding problems using DSA.
@@ -14,7 +16,7 @@ The intention with this repository is not to only serve as a playground to learn
 - [x] Tree
 - [ ] Trie
 - [x] Binary search tree
-- [ ] AVL tree
+- [x] AVL tree
 - [ ] Red-Black tree
 - [x] Binary heap
 - [x] Graph
