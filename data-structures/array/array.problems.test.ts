@@ -182,4 +182,27 @@ describe('Array', () => {
       expect(result).toBe(3);
     });
   });
+
+  describe('Problem 5', () => {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     */
+    test('Solution 1', () => {
+      const x = [1, 2, 3, 4];
+      const y = [3, 4, 5, 6];
+
+      function diff(x: number[], y: number[]): number[] {
+        const xMap = new Map(x.map((n) => [n, n]));
+        const yMap = new Map(y.map((n) => [n, n]));
+
+        return [
+          ...x.filter((n) => !yMap.has(n)),
+          ...y.filter((n) => !xMap.has(n)),
+        ];
+      }
+
+      expect(diff(x, y).toString()).toBe('1,2,5,6');
+    });
+  });
 });

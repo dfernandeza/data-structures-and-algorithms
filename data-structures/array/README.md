@@ -69,3 +69,15 @@ One last important thing to mention is that JavaScript array implementation defe
   Explanation: There are total 3 pairs where pow(x, y) is greater than pow(y, x) Pairs are (2, 1), (2, 5) and (6, 1)
   ```
 </details>
+
+<details>
+  <summary>Problem 5. Array diff</summary>
+
+Write a function `diff(arrX, arrY)` that accepts two arrays and returns a new array that contains all values that are not contained in both input arrays. The order of numbers in the result array does not matter.
+
+```text
+Input: X[] = [1, 2, 3, 4], Y = [3, 4, 5, 6]
+Output: [1, 2, 5, 6]
+```
+
+</details>
