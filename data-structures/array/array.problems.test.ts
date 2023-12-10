@@ -212,7 +212,7 @@ describe("Array", () => {
      * Space complexity: O(n)
      */
     test("Solution 1", () => {
-      const k = [0, 4, 1, 0, 4, 3];
+      const k = [0, 4, 1, 0, 4];
 
       function solution(k: number[]) {
         const max = Math.max(...k);
