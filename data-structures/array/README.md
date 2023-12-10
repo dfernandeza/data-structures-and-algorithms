@@ -81,3 +81,19 @@ Output: [1, 2, 5, 6]
 ```
 
 </details>
+
+<details>
+  <summary>Problem 6. Special integer `x`</summary>
+
+Given an array `k` of integers, find the special integer `x` such that there are `x` integers in the array `k` that are larger than or equal to `x`. The special integer doesn't have to exist in the array `k`.
+
+You can assume that there's always going to be one special integer or none in the array `k`, if no special integers are found, return `-1`.
+
+```text
+Input: k[] = [0, 4, 1, 0, 4]
+Output: 2
+
+There are 2 values that are greater than or equal to 2.
+```
+
+</details>
