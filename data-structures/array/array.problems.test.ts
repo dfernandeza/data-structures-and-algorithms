@@ -1,8 +1,8 @@
-import { Stack } from '../stack/stack';
+import { Stack } from "../stack/stack";
 
 // You can find the problem descriptions in ./README.md
-describe('Array', () => {
-  describe('Problem 1', () => {
+describe("Array", () => {
+  describe("Problem 1", () => {
     const matrix = [
       [1, 2, 3, 4, 5],
       [6, 7, 8, 9, 10],
@@ -23,7 +23,7 @@ describe('Array', () => {
      * Time complexity: O(n2)
      * Space complexity: O(n2)
      */
-    test('Solution 1', () => {
+    test("Solution 1", () => {
       const n = matrix.length;
       const result: number[][] = [];
 
@@ -44,7 +44,7 @@ describe('Array', () => {
      * Time complexity: O(n2)
      * Space complexity: O(1)
      */
-    test('Solution 2 (in place)', () => {
+    test("Solution 2 (in place)", () => {
       const n = matrix.length;
 
       for (let layer = 0; layer < n / 2; layer++) {
@@ -75,12 +75,12 @@ describe('Array', () => {
     });
   });
 
-  describe('Problem 2', () => {
+  describe("Problem 2", () => {
     /**
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    test('Solution 1', () => {
+    test("Solution 1", () => {
       const arr = [4, 5, 2, 25];
       const stack = new Stack();
       const ans = [];
@@ -108,12 +108,12 @@ describe('Array', () => {
     });
   });
 
-  describe('Problem 3', () => {
+  describe("Problem 3", () => {
     /**
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    test('Solution 1', () => {
+    test("Solution 1", () => {
       const nums1 = [1, 2, 3, 0, 0, 0];
       const m = 3;
       const nums2 = [2, 5, 6];
@@ -153,12 +153,12 @@ describe('Array', () => {
     });
   });
 
-  describe('Problem 4', () => {
+  describe("Problem 4", () => {
     /**
      * Time complexity: O(n * m)
      * Space complexity: O(1)
      */
-    test('Solution 1', () => {
+    test("Solution 1", () => {
       // Input: X[] = [2, 1, 6], Y = [1, 5]
       // Output: 3
       // Explanation: There are total 3 pairs where pow(x, y) is greater than pow(y, x)
@@ -183,12 +183,12 @@ describe('Array', () => {
     });
   });
 
-  describe('Problem 5', () => {
+  describe("Problem 5", () => {
     /**
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    test('Solution 1', () => {
+    test("Solution 1", () => {
       const x = [1, 2, 3, 4];
       const y = [3, 4, 5, 6];
 
@@ -202,7 +202,39 @@ describe('Array', () => {
         ];
       }
 
-      expect(diff(x, y).toString()).toBe('1,2,5,6');
+      expect(diff(x, y).toString()).toBe("1,2,5,6");
+    });
+  });
+
+  describe("Problem 6", () => {
+    /**
+     * Time complexity: O(mn)
+     * Space complexity: O(n)
+     */
+    test("Solution 1", () => {
+      const k = [0, 4, 1, 0, 4];
+
+      function solution(k: number[]) {
+        const max = Math.max(...k);
+        let x = max - 1;
+
+        for (let i = x; i >= 0; i--) {
+          let times = 0;
+          for (let j = 0; j < k.length; j++) {
+            if (k[j] >= i) {
+              times += 1;
+            }
+          }
+
+          if (i === times) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+
+      expect(solution(k)).toBe(2);
     });
   });
 });
