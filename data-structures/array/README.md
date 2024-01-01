@@ -97,3 +97,19 @@ There are 2 values that are greater than or equal to 2.
 ```
 
 </details>
+
+<details>
+  <summary>Problem 7. Maximized sum of minimums of pairs in an array</summary>
+
+Given an array `arr[]` of `N` integers where `N` is even, the task is to group the array elements in the pairs `(X1, Y1)`, `(X2, Y2)`, `(X3, Y3), …` such that the sum `min(X1, Y1) + min(X2, Y2) + min(X3, Y3) + …` is maximized.
+
+```text
+Input: arr[] = [1, 5, 3, 2]
+Output: 4
+
+(1, 5) and (3, 2) -> 1 + 2 = 3 
+(1, 3) and (5, 2) -> 1 + 2 = 3 
+(1, 2) and (5, 3) -> 1 + 3 = 4
+```
+
+</details>
