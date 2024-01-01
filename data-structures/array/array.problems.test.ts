@@ -237,4 +237,32 @@ describe("Array", () => {
       expect(solution(k)).toBe(2);
     });
   });
+
+  describe("Problem 7", () => {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     */
+    test("Solution 1", () => {
+      const arr1 = [1, 5, 3, 2];
+      const arr2 = [1, 3, 2, 1, 4, 5];
+
+      function solution(arr: number[]) {
+        // Sort first to make sure the min value is maximized
+        arr.sort((a, b) => a - b);
+
+        // sum all the min items. Min items are now placed at the even indexes ar[0], arr[2], arr[4], ...
+        return arr.reduce((sum, num, i) => {
+          if (i % 2 === 0) {
+            sum += num;
+          }
+
+          return sum;
+        }, 0);
+      }
+
+      expect(solution(arr1)).toBe(4);
+      expect(solution(arr2)).toBe(7);
+    });
+  });
 });

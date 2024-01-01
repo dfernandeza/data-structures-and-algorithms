@@ -1,7 +1,7 @@
 # Data structures and algorithms (DSA)
 
 ![CI passing](https://github.com/dfernandeza/data-structures-and-algorithms/actions/workflows/ci.yml/badge.svg)
-![solved coding problems](https://img.shields.io/badge/solved%20coding%20problems-17-success)
+![solved coding problems](https://img.shields.io/badge/solved%20coding%20problems-19-success)
 
 This repository contains implementations of common data structures and algorithms using modern JavaScript.
 
@@ -75,6 +75,22 @@ To run your own copy, fork this repository and execute:
 ```
 npm i
 npm test
+```
+
+## Running specific tests
+
+You can target specific tests by using the `--testNamePattern` (or `-t`) flag. For example, 
+
+To run all the tests related to the `array` data structure, you can execute:
+
+```
+npm test -- -t "Array"
+```
+
+To run tests the array problem 1, you can execute:
+
+```
+npm test -- -t "Array Problem 1"
 ```
 
 _This project uses [Jest](https://github.com/facebook/jest) for writing the tests and [SWC](https://github.com/swc-project/swc) as the test runner._
