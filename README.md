@@ -1,7 +1,7 @@
 # Data structures and algorithms (DSA)
 
 ![CI passing](https://github.com/dfernandeza/data-structures-and-algorithms/actions/workflows/ci.yml/badge.svg)
-![solved coding problems](https://img.shields.io/badge/solved%20coding%20problems-19-success)
+![solved coding problems](https://img.shields.io/badge/solved%20coding%20problems-20-success)
 
 This repository contains implementations of common data structures and algorithms using modern JavaScript.
 

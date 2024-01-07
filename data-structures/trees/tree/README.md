@@ -58,3 +58,22 @@ flowchart TB
   }
   ```
 </details>
+
+<details>
+  <summary>Problem 4. Serialize and deserialize a binary tree</summary>
+  
+  Given a binary tree, write a program to serialize the tree into a string and then deserialize the string back into the tree.
+  
+  Example, for the following tree:
+
+  ```text
+         1
+       /   \
+      2     3
+     /  \   /  \ 
+    4    5 6    7
+  ```
+
+The serialized string would be: `1,2,4,#,#,5,#,#,3,6,#,#,7,#,#`
+
+</details>
